@@ -23,12 +23,12 @@ import json
 import boto3
 
 def lambda_handler(event, context):
-    sesClient = boto3.client("ses", region_name="your-region")
+    sesClient = boto3.client("ses", region_name="eu-north-1")
     
     emailResponse = sesClient.send_email(
         Destination={
             "ToAddresses" : [
-                "receiver1@mail.com", "receiver2@mail.com"
+                "xyz@gmail.com", "otherverifiedidentity@mail.com"
             ],
         },
         Message={
@@ -41,7 +41,7 @@ def lambda_handler(event, context):
                 "Data" : "AWS Project TEST"
             },
         },
-        Source="sender@mail.com"
+        Source="sender@gmail.com"
         )
 ```
 After deploying this code, we can click on test. An test email will be sent on the selected destination mail ids. Thank you for reading.
