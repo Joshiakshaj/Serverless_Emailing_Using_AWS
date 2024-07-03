@@ -4,8 +4,10 @@ This project can be used to send emails to senders using AWS. This is better tha
 
 ## Steps of implementation
 - First create a Lambda function and select Python 3.12 in the Runtime menu and click Create Function
-- Now we will have to create a new permission for our lambda function to access SES. To do this go to configuration tab in the lambda function and go to premissions. We can see that a default role is created for the function called "ses-email-role-u412n10d". Click on this role and we will be redirected to a new IAM Console page.
-![App Page](https://github.com/anshulsathe/Serverless-Emailing-Using-AWS/blob/main/Screenshot%20(128).png)
+- Now we will have to create a new permission for our lambda function to access SES. To do this go to configuration tab in the lambda function and go to premissions. We can see that a default role is created for the function called "ses_email_func-role-nocc4fhm". Click on this role and we will be redirected to a new IAM Console page.
+
+![Screenshot 2024-07-03 100003](https://github.com/Joshiakshaj/Serverless_Emailing_Using_AWS/assets/129145776/102edab6-235a-457e-8e08-5e6186e40b98)
+
 - In the IAM Console, we can see that we have a permission policy given. We have to create a new inline policy under the add permissions tab. 
 - In the visual editor for the inline policy tab, we have to select all write premissions under the write tab in the SES Service. Now select "All Resource" under the resource tab. Now we can click on review policy and create permission.
 
