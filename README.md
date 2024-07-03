@@ -34,7 +34,7 @@ def lambda_handler(event, context):
         Message={
             "Body": {
                 "Text": {
-                    "Data" : "Succesfully sent and email using SES"
+                    "Data" : "Successful test for Serverless Emailing Service using Lambda Function in AWS. Thanks and Regards, Akshaj Joshi"
                 }
             },
             "Subject" :{
