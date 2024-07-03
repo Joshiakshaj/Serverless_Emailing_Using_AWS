@@ -11,13 +11,13 @@ This project can be used to send emails to verified identity accounts using AWS.
 - In the IAM Console, we can see that we have a permission policy given. We have to create a new inline policy under the add permissions tab. 
 - In the visual editor for the inline policy tab, we have to select all write premissions under the write tab in the SES Service. Now select "All Resource" under the resource tab. Now we can click on review policy and create permission.
 
-This concludes one part of our project, we have succesfully given our lambda function "ses-email" permissions to write emails by accessing SES. Now we will be configuring SES.
+This concludes one part of our project, we have succesfully given our lambda function "ses_email_func" permissions to write emails by accessing SES. Now we will be configuring SES.
 
 - In SES, click on the create identity option. Here select "email address" and write your email address. An email will be sent to this address in order to confirm and verify your identity.
 
   ![Screenshot 2024-07-03 104530](https://github.com/Joshiakshaj/Serverless_Emailing_Using_AWS/assets/129145776/0875eb31-aca3-4be0-aa21-3b1c57130001)
 
-- After this is done, write the following code in your "ses-emailing" lambda function:
+- After this is done, write the following code in your "ses_email_func" lambda function:
 ```bash
 import json
 import boto3
