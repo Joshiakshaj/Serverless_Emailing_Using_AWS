@@ -1,6 +1,6 @@
 # Serverless Emailing using AWS
 
-This project can be used to send emails to senders using AWS. This is better than a normal email since we can schedule or trigger emails according to our demand. We have to keep in mind that the two tools that are used in this project are Amazon Simple Emailing Service (SES) and AWS Lambda.
+This project can be used to send emails to verified identity accounts using AWS. This is better than a normal email since we can schedule or trigger emails according on-demand. The two tools that are used for this project are Amazon Simple Emailing Service (SES) and AWS Lambda.
 
 ## Steps of implementation
 - First create a Lambda function and select Python 3.12 in the Runtime menu and click Create Function
@@ -28,7 +28,7 @@ def lambda_handler(event, context):
     emailResponse = sesClient.send_email(
         Destination={
             "ToAddresses" : [
-                "receiver1@mail", "receiver2@mail.com"
+                "receiver1@mail.com", "receiver2@mail.com"
             ],
         },
         Message={
@@ -45,4 +45,5 @@ def lambda_handler(event, context):
         )
 ```
 After deploying this code, we can click on test. An test email will be sent on the selected destination mail ids. Thank you for reading.
-![App Page](https://github.com/anshulsathe/Serverless-Emailing-Using-AWS/blob/main/Screenshot%20(129).png)
+
+![Screenshot 2024-07-03 114446](https://github.com/Joshiakshaj/Serverless_Emailing_Using_AWS/assets/129145776/31d7c380-9a39-4065-8525-e9e9ec974fc7)
